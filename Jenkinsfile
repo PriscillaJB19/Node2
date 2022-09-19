@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t priscillajb/nodeapp:latest .'
+				sh 'docker build -t priscillajb/node-app:1.0 .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push priscillajb/nodeapp:latest'
+				sh 'docker push priscillajb/node-app:1.0'
 			}
 		}
 	}
