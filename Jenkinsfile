@@ -1,6 +1,6 @@
 pipeline{
 
-	agent any
+	agent {'linux'}
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('priscillajb-dockerhub')
@@ -34,12 +34,6 @@ pipeline{
 			steps {
 				sh 'docker push priscillajb/node-app:1.0'
 			}
-		}
-	}
-
-	post {
-		always {
-			sh 'docker logout'
 		}
 	}
 
