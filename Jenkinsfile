@@ -1,6 +1,6 @@
 pipeline{
 
-	agent {'linux'}
+	agent any
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('priscillajb-dockerhub')
