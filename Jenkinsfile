@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t priscillajb/node-app:1.0 .'
+				sh 'docker build -t priscillajb/node-app:1.0'
 			}
 		}
 
