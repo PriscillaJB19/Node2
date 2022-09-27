@@ -1,0 +1,1 @@
+docker build -t darinpope/dp-alpine:latest .
