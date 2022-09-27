@@ -29,12 +29,6 @@ pipeline{
 			}
 		}
 
-		stage('Push') {
-
-			steps {
-				sh 'docker push priscillajb/node-app:1.0'
-			}
-		}
 	}
 
 }
