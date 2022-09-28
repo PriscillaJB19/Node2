@@ -7,7 +7,7 @@ pipeline {
     }
     
     environment {
-        REGISTRY = 'priscillajb/node-app'
+        REGISTRY = 'priscillajb/nodeapp'
     }
     
     stages{
