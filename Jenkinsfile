@@ -7,7 +7,6 @@ pipeline {
     }
     
     environment {
-        PROJECT_ROOT = 'Jenkinsfile'
         REGISTRY = 'priscillajb/node-app'
     }
     
@@ -15,8 +14,7 @@ pipeline {
 
 		stage('Install'){
             steps{
-                echo "${PROJECT_ROOT}"
-				Dependencies(project_root: PROJECT_ROOT)
+				Dependencies();
             }
     }
 }
