@@ -14,7 +14,7 @@ pipeline {
 
 		stage('Install'){
             steps{
-				Dependencies(name:"Priscilla",dayOfWeek:"lunes")
+				Dependencies()
             }
     }
 }
