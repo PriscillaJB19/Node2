@@ -7,7 +7,7 @@ pipeline {
     }
     
     environment {
-        PROJECT_ROOT = 'Node/Jenkinsfile'
+        PROJECT_ROOT = 'Jenkinsfile'
         REGISTRY = 'priscillajb/node-app'
     }
     
