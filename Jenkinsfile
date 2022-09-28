@@ -8,7 +8,7 @@ pipeline {
     
     environment {
         PROJECT_ROOT = './scr'
-        REGISTRY = 'priscillajb/nodeapp'
+        REGISTRY = 'priscillajb/node-app'
     }
     
     stages{
