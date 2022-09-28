@@ -1,27 +1,24 @@
-@Library("shared-library")_
-pipeline {
-    agent any
-    
-    tools{
-        nodejs 'nodejs'
-    }
-    
-    environment {
-        REGISTRY = 'priscillajb/node-app'
-    }
-    
+@Library('shared-library')_
+pipeline{
+    agent any 
+
     stages{
-
-		stage('Install'){
+        stage('docker build'){
             steps{
-				Dependencies()
+                script{
+                    dockerLib.build(DockerfilePath:"node/dockerfile",
+                    DockerImage:"priscillajb/nodeapp-${BUILD_ID}",
+                    DockerContext:"node")
+                }
             }
-    }
+        }
 
-    	stage('Build'){
-            steps{
-                Build(registry:REGISTRY,buildNumber:"${BUILD_NUMBER}")
+    stage('docker push'){
+        steps{
+            script{
+                dockerLib.push(DockerImage:"priscillajb/nodeapp-${BUILD_ID}")
             }
+            }
+        }
     }
-}
 }
