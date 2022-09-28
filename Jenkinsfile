@@ -7,20 +7,21 @@ pipeline {
     }
     
     environment {
-        REGISTRY = 'priscillajb/node-app'
+        PROJECT_ROOT = 'node/'
+        REGISTRY = 'priscillajb/nodeapp'
     }
     
     stages{
 
 		stage('Install'){
             steps{
-				Dependencies()
+				Dependencies(project_root:PROJECT_ROOT)
             }
     }
 
     	stage('Build'){
             steps{
-                Build(registry:REGISTRY,buildNumber:"${BUILD_NUMBER}")
+                Build(project_root:"${PROJECT_ROOT}",registry:"${REGISTRY}",buildNumber:"${BUILD_NUMBER}")
             }
     }
 }
