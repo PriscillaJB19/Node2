@@ -7,7 +7,7 @@ pipeline {
     }
     
     environment {
-        PROJECT_ROOT = '/Documents/node'
+        PROJECT_ROOT = '/..'
         REGISTRY = 'priscillajb/nodeapp'
     }
     
