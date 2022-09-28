@@ -7,7 +7,7 @@ pipeline {
     }
     
     environment {
-        PROJECT_ROOT = './pakage-look.json'
+        PROJECT_ROOT = './jenkins'
         REGISTRY = 'priscillajb/node-app'
     }
     
